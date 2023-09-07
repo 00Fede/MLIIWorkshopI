@@ -34,5 +34,17 @@ In the virtual environment, run
 ``
 python -m tests.svm
 ``
+
+## To use in jupyter notebooks
+Install all the dependencies of Pipfile in python kernel used to run notebook. The following code allows to import the local package:
+
+```python
+import os
+import sys
+module_path = os.path.abspath(os.path.join('.','mlpackage'))
+if module_path not in sys.path:
+    sys.path.append(module_path)
+```
+
 ## Credits
 This code was adapted from the following repository https://github.com/rushter/MLAlgorithms. All credits go to the respective creators.
