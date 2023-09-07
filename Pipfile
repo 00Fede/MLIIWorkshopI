@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+matplotlib = ">=1.5.1"
+numpy = ">=1.11.1"
+scikit-learn = ">=0.18"
+scipy = ">=0.18.0"
+seaborn = ">=0.7.1"
+autograd = ">=1.1.7"
+gym = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
