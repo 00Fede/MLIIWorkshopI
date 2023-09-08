@@ -2,8 +2,8 @@
 import numpy as np
 
 class BaseEstimator:
-    y_required = False
-    fit_required = False
+    y_required = True
+    fit_required = True
 
     def _setup_input(self, X, y=None):
         """Ensure inputs to an estimator are in the expected format.
