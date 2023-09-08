@@ -113,3 +113,18 @@ for i in range(len(comps)):
         plt.subplot(2, 3, i+1),
         plt.imshow(low_rank, cmap='gray'),
         plt.title(f'n_components = {comps[i]}')
+
+
+# using t-SNE
+from mymlkit.tsne import TSNE
+
+
+tsne = TSNE(2, max_iter=200)
+X_train_reduced2 = tsne.fit_transform(X_train.values)
+X_test_reduced2 = tsne.fit_transform(X_test.values)
+
+#model = LogisticRegression(lr=0.001, max_iters=2500)
+model = LogisticRegression()
+model.fit(X_train_reduced2, y_train)
+predictions = model.predict(X_test_reduced2)
+print("Classification accuracy for tsne: %s" % ( accuracy_score(y_test, predictions)))

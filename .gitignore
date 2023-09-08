@@ -4,3 +4,5 @@ dist/
 .cache
 *.swp
 .idea
+photos/
+photos_processed/
